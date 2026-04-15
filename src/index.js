@@ -77,9 +77,24 @@ app.get('/health', async (req, res) => {
   }
 });
 
+// 根路径
+app.get('/', (req, res) => {
+  res.json({
+    message: '共创故事工坊 API',
+    version: '1.0.0',
+    endpoints: {
+      health: '/health',
+      users: '/api/users',
+      stories: '/api/stories',
+      revival: '/api/revival',
+      admin: '/api/admin'
+    }
+  });
+});
+
 // 404 处理
 app.use((req, res) => {
-  res.status(404).json({ message: '接口不存在' });
+  res.status(404).json({ message: '接口不存在', path: req.path });
 });
 
 // 错误处理
