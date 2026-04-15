@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "name": "story-collab-api",
+  "builds": [
+    {
+      "src": "src/index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "src/index.js"
+    }
+  ],
+  "env": {
+    "SUPABASE_URL": "https://zwyhjijuhazkkindvdzd.supabase.co",
+    "SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp3eWhqaWp1aGF6a2tpbmR2ZHpkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzYwOTcxNTAsImV4cCI6MjA5MTY3MzE1MH0.tY_wp1NfoRKxSbk7Juffv8Jf9ZGxInUzizaIYSOhdtk",
+    "SUPABASE_SERVICE_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp3eWhqaWp1aGF6a2tpbmR2ZHpkIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3NjA5NzE1MCwiZXhwIjoyMDkxNjczMTUwfQ.tyX9GahRMvRa1Vh2BmT6JGwQUVWKXseJKdYAdmFjsXo",
+    "NODE_ENV": "production"
+  }
+}
